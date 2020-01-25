@@ -1,21 +1,17 @@
 replicaCount: 3
-
 image:
-  repository: gitopsdemo/app-a:2f6283c9043d920abcb02907ef55b904e445edf9
+  repository: gitopsdemo/app-a:cd398c7ce9d149884620a1a48764d567b853a8a0
   pullPolicy: IfNotPresent
-
 imagePullSecrets: []
-nameOverride: ""
+nameOverride: &1362591513 ""
 fullnameOverride: ""
-
 envVars:
-- name: APPA_PORT
-  value: "80"
+- &1146392900 name: APPA_PORT
+  &1145293729 value: &255005569 "80"
 - name: APPB_SVC
   value: "prd-app-b"
-
 service:
   type: ClusterIP
   port: 80
   targetPort: 80
-
+...
